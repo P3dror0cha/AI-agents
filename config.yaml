@@ -1,0 +1,41 @@
+# Search preferences:
+search:
+  country: "Brazil"
+  states: ["SP"]  # Example: ["SP", "RJ"]
+  keywords:
+    - "farmacêutico"
+    - "farmacêutica"
+    - "farmaceutico"
+    - "farmaceutica"
+  include_temporary_positions: false
+
+# Local storage:
+storage:
+  database_path: "data/competitions.sqlite3"
+
+# Report output:
+report:
+  output_path: "outputs/report.md"
+  language: "pt-BR"
+
+# Notifications remain disabled during development:
+notifications:
+  enabled: false
+
+# Initial source for collection
+sources:
+  pci:
+    url: "https://www.pciconcursos.com.br/cargos/farmaceutico"
+    timeout_seconds: 30
+
+# AI model settings
+ai:
+  provider: "groq"
+  base_url: "https://api.groq.com/openai/v1"
+  model: "openai/gpt-oss-20b"
+
+  # Processing limits for each run
+processing:
+  max_articles: 3
+  max_new_analyses: 2
+  request_delay_seconds: 5
